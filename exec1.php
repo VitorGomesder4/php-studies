@@ -14,7 +14,7 @@
             $var1 = htmlspecialchars($_REQUEST["valor1"]);
             $var2 = htmlspecialchars($_REQUEST["valor2"]);
             
-            if (isnumeric($var1) && is_numeric($var2)) 
+            if (is_numeric($var1) && is_numeric($var2)) 
             {
                 $soma = $var1 + $var2;
                 echo "Soma:" . $soma . "<br />" ;
