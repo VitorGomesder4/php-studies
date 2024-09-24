@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt_BR">
+    <head>
+        <title>Galeria</title>
+        <meta charset="UTF-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <style>
+            .galeria-container{
+                width: 90%;
+                margin: 0 auto;
+                display: flex;
+            }
+            .close{
+
+            }
+        </style>
+
+    </head>
+    <body>
+        <div class="galeria-container">
+            <div class="img-wrap">
+                <img src="" alt="Catedral" onclick="openModal(this);"/>
+            </div>
+            <div class="img-wrap">
+                <img src="" alt="estadio" onclick="openModal(this);"/>
+            </div>
+            <div class="img-wrap">
+                <img src="" alt="congresso" onclick="openModal(this);"/>
+            </div>            
+        </div>
+
+        <div id="myModal" class="modal">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <img class="modal-content" id="img01"/>
+        </div>
+        <script>
+            function openModal(img){
+                var modal = document.getElementById("myModal");
+                var modalImg = document.getElementById("img01");
+                modal.style.display = "block";
+                modalImg = img.src;
+            }
+            function closeModal(){
+                var modalImg = document.getElementById("img01");                
+                modal.style.display = "none";                
+            }
+        </script>
+
+    </body>
+</html>

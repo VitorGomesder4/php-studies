@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="pt_BR">
+    <head>
+        <title>Lista de Tarefas</title>
+        <meta charset="UTF-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <style>
+            body{
+                font-family: "Arial", sans-serif;
+                background: #f4f4f4;
+                margin: 0;
+                padding: 20px;
+            }
+            #new-task-form{
+                display: flex;
+                justify-content: space-between;
+                margin-bottom: 20px;
+            }
+            #new-task-input{
+                flex: 1;
+                padding: 10px;
+                font-size: 16px;
+                margin-right: 5px;
+            }
+            #new-task-submit{
+                padding: 10px 20px;
+                cursor: pointer;
+            }
+            .task-list{
+                list-style: none;
+                padding: 0;
+            }
+            .task{
+                background: #fff;
+                margin-bottom: 10px;
+                padding: 10px;
+                box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+
+            }
+            .task .task-content{
+                flex: 1;
+            }
+            .task button{
+                background: red;
+                color: white;
+                border: none;
+                padding: 5px 11px;
+                cursor: pointer;
+            }
+            .task.completed .task-content{
+                text-decoration: line-through;
+
+            }
+
+        </style>
+
+    </head>
+    <body>
+        <h1>Minha Lista de Tarefas</h1>
+        <form id="new-task-form">
+            <input id="new-task-input" placeholder="O que você precisa fazer?" required/>
+            <input id="new-task-submit" type="submit" value="Adicionar tarefa"/>
+
+        </form>
+        <ul id="task-list" class="task-list"></ul>
+
+        <script>
+            document.addEventListener("DOMContentListener", () =>{
+                const taskList = document.getElementById("task-list");
+                const newTaskForm = document.getElementById("new-task-input");
+            });
+        </script>
+    </body>
+</html>
