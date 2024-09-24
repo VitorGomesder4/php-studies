@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="pt_BR">
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <style type="text/css">
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background: #f0f0f5;
+            background: -webkit-linear-gradient(to right, #e6f7ff, #ccd9ff);
+            background: linear-gradient(to right, #e6f7ff, #ccd9ff);
+        }
+        .container-first{
+            position: relative;
+            background: #2c3e50;
+            border-radius: 10px;
+            overflow: hidden;
+            z-index: 10;
+        }
+        .container-first .calculator{
+            position: relative;
+            display: grid;
+        }
+        .container-first .calculator .value{
+            grid-column: span 4;
+            height: 150px;
+            width: 200px;
+            border: none;
+            padding-left: 1em;
+            font-size: 2.5em;
+            color: #f1c40f;
+        }
+        .container-first .calculator span{
+            display: grid;
+            height: 4.5em;
+            font-weight: 900;
+            color: #ecf0f1;
+            text-align: center;
+            align-items: center;
+            border-bottom: 4px solid rgba(236, 240, 241, 0.07);
+            border-right: 4px solid rgba(236, 240, 241, 0.07);
+        }
+        input[type="text"]{
+            color: #e67e22;
+            background-color: #d1b2ae;
+        }
+    </style>
+</head>
+<body>
+    <div class="container-first">
+        <form name="val" class="calculator">
+            <input type="text" class="value" name="resp">
+        
+            <span onclick="document.val.resp.value+='7'">7</span>
+            
+            <span onclick="document.val.resp.value+='8'">8</span>
+
+            <span onclick="document.val.resp.value+='9'">9</span>
+
+            <span onclick="document.val.resp.value+='/'">/</span>
+        
+            <span onclick="document.val.resp.value+='4'">4</span>
+
+            <span onclick="document.val.resp.value+='5'">5</span>
+
+            <span onclick="document.val.resp.value+='6'">6</span>
+
+            <span onclick="document.val.resp.value+='*'">*</span>
+
+        
+            <span onclick="document.val.resp.value+='1'">1</span>
+
+            <span onclick="document.val.resp.value+='2'">2</span>
+
+            <span onclick="document.val.resp.value+='3'">3</span>
+
+            <span onclick="document.val.resp.value+='-'">-</span>
+
+        
+            <span onclick="document.val.resp.value+='0'">0</span>
+
+            <span onclick="document.val.resp.value+='.00'">.00</span>
+
+            <span onclick="document.val.resp.value=''">C</span>
+
+            <span onclick="document.val.resp.value+='+'">+</span>
+        
+            <span onclick="document.val.resp.value=eval(document.val.resp.value)">=</span>
+        </form>        
+    </div>
+</body>
+</html>
